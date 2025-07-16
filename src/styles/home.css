@@ -161,4 +161,92 @@
       width: 100%;
     }
   }
+
+  /* Rooms Section */
+.rooms-section {
+    padding: 60px 40px;
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+  
+  .section-title {
+    font-size: 32px;
+    margin-bottom: 30px;
+    font-weight: 600;
+  }
+  
+  .room-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+  }
+  
+  .room-card {
+    background-color: #e5e5e5;
+    padding: 40px;
+    width: 280px;
+    border-radius: 8px;
+    font-size: 18px;
+  }
+  
+  /* Add Button Form */
+  .add-btn-form {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  
+  .add-btn-form input {
+    padding: 10px;
+    width: 220px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
+  .add-btn-form button {
+    background-color: #d5a86e;
+    border: none;
+    padding: 10px 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  /* CTA Buttons */
+  .cta-buttons-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 10px;
+  }
+  
+  .cta-btn {
+    background-color: #000;
+    color: #fff;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 500;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .room-card {
+      width: 100%;
+    }
+  
+    .add-btn-form input {
+      width: 100%;
+    }
+  
+    .add-btn-form {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  }
   
