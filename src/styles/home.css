@@ -6,44 +6,50 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: "Georgia", serif;
+  font-family: 'Georgia', serif;
+  padding: 0 40px;
+  text-align: center;
 }
 
 .hero-overlay {
   width: 100%;
   max-width: 1200px;
-  padding: 40px;
-  text-align: center;
   position: relative;
 }
 
 .hero-subtitle {
   text-transform: uppercase;
-  font-size: 14px;
-  letter-spacing: 2px;
+  font-size: 16px;
+  letter-spacing: 3px;
   color: #d5a86e;
   margin-bottom: 20px;
+  font-weight: 500;
 }
 
 .hero-title {
-  font-size: 48px;
+  font-size: 56px;
   line-height: 1.2;
   margin-bottom: 30px;
+  font-weight: 700;
+  color: #fff;
 }
 
 .hero-button {
-  padding: 12px 24px;
-  font-size: 16px;
+  padding: 14px 32px;
+  font-size: 18px;
   background-color: transparent;
   color: #fff;
-  border: 1px solid #fff;
+  border: 2px solid #fff;
   cursor: pointer;
   transition: all 0.3s ease;
+  border-radius: 4px;
+  font-weight: 600;
 }
 
 .hero-button:hover {
   background-color: #d5a86e;
   color: #000;
+  border-color: #d5a86e;
 }
 
 .hero-arrow {
@@ -66,13 +72,27 @@
   right: 20px;
 }
 
+/* Responsive */
+@media (max-width: 1024px) {
+  .hero-title {
+    font-size: 42px;
+  }
+
+  .hero-button {
+    padding: 12px 26px;
+    font-size: 16px;
+  }
+}
+
 @media (max-width: 768px) {
   .hero-title {
     font-size: 32px;
+    margin-bottom: 20px;
   }
 
   .hero-subtitle {
     font-size: 12px;
+    letter-spacing: 1px;
   }
 
   .hero-button {
@@ -86,164 +106,198 @@
   }
 }
 
+  
 .booking-section {
-  background-color: #1a1a1a;
-  padding: 20px 40px;
-  display: flex;
-  justify-content: center;
-}
-
-.booking-form {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  width: 100%;
-  max-width: 1000px;
-  justify-content: space-between;
-  align-items: flex-end;
-}
-
-.form-group {
-  display: flex;
-  flex-direction: column;
-  color: #fff;
-  flex: 1;
-  min-width: 180px;
-}
-
-.form-group label {
-  font-size: 14px;
-  margin-bottom: 6px;
-  color: #d5a86e;
-}
-
-.form-group input,
-.form-group select {
-  padding: 10px;
-  border: none;
-  font-size: 16px;
-  background-color: #2a2a2a;
-  color: #fff;
-  border-radius: 4px;
-  outline: none;
-}
-
-.check-btn {
-  padding: 12px 24px;
-  background-color: #d5a86e;
-  border: none;
-  color: #000;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-  border-radius: 4px;
-  min-width: 200px;
-  transition: background-color 0.3s ease;
-}
-
-.check-btn:hover {
-  background-color: #fff;
-}
-
-@media (max-width: 768px) {
+    background-color: #1a1a1a;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: center;
+  }
+  
   .booking-form {
-    flex-direction: column;
-    gap: 15px;
-    align-items: stretch;
-  }
-
-  .check-btn {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
     width: 100%;
+    max-width: 1000px;
+    justify-content: space-between;
+    align-items: flex-end;
   }
-}
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    flex: 1;
+    min-width: 180px;
+  }
+  
+  .form-group label {
+    font-size: 14px;
+    margin-bottom: 6px;
+    color: #d5a86e;
+  }
+  
+  .form-group input,
+  .form-group select {
+    padding: 10px;
+    border: none;
+    font-size: 16px;
+    background-color: #2a2a2a;
+    color: #fff;
+    border-radius: 4px;
+    outline: none;
+  }
+  
+  .check-btn {
+    padding: 12px 24px;
+    background-color: #d5a86e;
+    border: none;
+    color: #000;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+    min-width: 200px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .check-btn:hover {
+    background-color: #fff;
+  }
+  
+  @media (max-width: 768px) {
+    .booking-form {
+      flex-direction: column;
+      gap: 15px;
+      align-items: stretch;
+    }
+  
+    .check-btn {
+      width: 100%;
+    }
+  }
 
 .rooms-section {
-  padding: 60px 40px;
-  background-color: #f9f9f9;
+  padding: 80px 40px;
+  background-color: #f4f4f4;
   text-align: center;
 }
 
 .section-title {
-  font-size: 32px;
-  margin-bottom: 30px;
-  font-weight: 600;
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 40px;
 }
 
 .room-cards {
   display: flex;
   justify-content: center;
-  gap: 20px;
   flex-wrap: wrap;
-  margin-bottom: 30px;
+  gap: 30px;
+  margin-bottom: 40px;
 }
 
 .room-card {
-  background-color: #e5e5e5;
-  padding: 40px;
-  width: 280px;
+  background-color: #fff;
+  padding: 24px;
+  width: 300px;
   border-radius: 8px;
   font-size: 18px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+  text-align: left;
+}
+
+.room-card:hover {
+  transform: translateY(-6px);
 }
 
 .add-btn-form {
   display: flex;
-  gap: 10px;
+  gap: 12px;
   justify-content: center;
   flex-wrap: wrap;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .add-btn-form input {
-  padding: 10px;
-  width: 220px;
+  padding: 12px;
+  width: 240px;
   border-radius: 4px;
   border: 1px solid #ccc;
+  font-size: 14px;
 }
 
 .add-btn-form button {
   background-color: #d5a86e;
   border: none;
-  padding: 10px 16px;
-  font-weight: bold;
+  padding: 12px 20px;
+  font-weight: 600;
+  font-size: 14px;
   cursor: pointer;
   border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.add-btn-form button:hover {
+  background-color: #000;
+  color: #fff;
 }
 
 .cta-buttons-container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 10px;
+  gap: 16px;
+  margin-top: 20px;
 }
 
 .cta-btn {
   background-color: #000;
   color: #fff;
-  padding: 12px 24px;
+  padding: 12px 28px;
   text-decoration: none;
   border-radius: 4px;
-  font-weight: 500;
+  font-weight: 600;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.cta-btn:hover {
+  background-color: #d5a86e;
+  color: #000;
 }
 
 @media (max-width: 768px) {
-  .room-card {
-    width: 100%;
+  .section-title {
+    font-size: 28px;
   }
 
-  .add-btn-form input {
+  .room-card {
     width: 100%;
   }
 
   .add-btn-form {
     flex-direction: column;
-    align-items: stretch;
+    align-items: center;
+  }
+
+  .add-btn-form input,
+  .add-btn-form button {
+    width: 100%;
+  }
+
+  .cta-btn {
+    width: 100%;
+    text-align: center;
   }
 }
 
+  
 .amenities-section {
-  padding: 80px 40px;
   background-color: #fff;
+  padding: 80px 40px;
   text-align: center;
 }
 
@@ -252,27 +306,33 @@
   font-size: 14px;
   letter-spacing: 2px;
   color: #d5a86e;
+  font-weight: 500;
   margin-bottom: 10px;
+}
+
+.section-title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 40px;
 }
 
 .amenities-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 24px;
-  margin-top: 40px;
-  justify-items: center;
+  gap: 30px;
+  margin-top: 30px;
 }
 
 .amenity-card {
-  padding: 30px;
-  border-radius: 8px;
+  padding: 30px 24px;
+  border-radius: 10px;
   text-align: left;
-  max-width: 400px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
 }
 
 .amenity-card.light {
-  background-color: #e0e0e0;
-  color: #111;
+  background-color: #f5f5f5;
 }
 
 .amenity-card.dark {
@@ -280,24 +340,36 @@
   color: #fff;
 }
 
+.amenity-card:hover {
+  transform: translateY(-6px);
+}
+
 .amenity-card h3 {
   font-size: 20px;
-  margin-bottom: 10px;
+  font-weight: 600;
+  margin-bottom: 12px;
 }
 
 .amenity-card p {
   font-size: 14px;
+  color: inherit;
   margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.amenity-card.dark p {
+  color: #ccc;
 }
 
 .amenity-card button {
-  padding: 10px 16px;
   background-color: #d5a86e;
-  color: #000;
   border: none;
+  padding: 10px 20px;
+  font-weight: bold;
   border-radius: 4px;
-  font-weight: 600;
+  color: #000;
   cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 .amenity-card button:hover {
@@ -305,11 +377,21 @@
   color: #fff;
 }
 
+/* Responsive */
 @media (max-width: 768px) {
+  .section-title {
+    font-size: 28px;
+  }
+
   .amenity-card {
-    max-width: 100%;
+    padding: 24px 20px;
+  }
+
+  .amenity-card h3 {
+    font-size: 18px;
   }
 }
+
 
 .testimonial-section {
   background: linear-gradient(to bottom, #3d3d3d, #000);
@@ -414,3 +496,4 @@
     max-width: 100%;
   }
 }
+

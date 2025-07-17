@@ -103,7 +103,7 @@ const Home = () => {
         <h2 className="section-title">Amenities That You Can Enjoy</h2>
 
         <div className="amenities-grid">
-          <div className="amenity-card light">
+          <div className="amenity-card dark">
             <h3>Workout & Yoga Rooms</h3>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
@@ -112,7 +112,7 @@ const Home = () => {
             <button>Discover More</button>
           </div>
 
-          <div className="amenity-card dark">
+          <div className="amenity-card light">
             <h3>Spa, Massage & Sauna</h3>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla

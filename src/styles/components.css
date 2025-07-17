@@ -28,11 +28,29 @@
 
 .nav-links a,
 .nav-links span {
+  position: relative;
   text-decoration: none;
   color: #fff;
   font-size: 16px;
-  position: relative;
-  cursor: pointer;
+  padding: 8px 0;
+  transition: color 0.3s ease;
+}
+
+.nav-links a::after,
+.nav-links span::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  background-color: #d5a86e;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links span:hover::after {
+  width: 100%;
 }
 
 .dropdown {
@@ -243,10 +261,6 @@
   text-align: center;
 }
 
-.footer-bottom .social-icons span {
-  font-size: 18px;
-  margin: 0 6px;
-}
 
 .footer-links {
   margin-top: 10px;

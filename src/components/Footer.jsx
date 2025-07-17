@@ -42,12 +42,6 @@ const Footer = () => {
       </div>
 
       <div className="footer-bottom">
-        <div className="social-icons">
-          <span>🔵</span>
-          <span>🐦</span>
-          <span>📸</span>
-          <span>▶️</span>
-        </div>
         <p>&copy; 2025 Imperial Grand Hotel. All Rights Reserved.</p>
         <div className="footer-links">
           <a href="/">Privacy Policy</a>
