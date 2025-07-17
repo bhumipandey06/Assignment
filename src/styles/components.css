@@ -77,3 +77,38 @@
     }
   }
   
+  .editable-text-container {
+    margin: 20px auto;
+    text-align: center;
+  }
+  
+  .editable-text {
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    font-weight: bold;
+    outline: none;
+  }
+  
+  .editable-text.editing {
+    background-color: #403c2e;
+    border: 1px dashed #d5a86e;
+    padding: 8px;
+  }
+  
+  .editable-text-container button {
+    padding: 10px 20px;
+    background-color: #d5a86e;
+    border: none;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: 0.3s;
+  }
+  
+  .editable-text-container button:hover {
+    background-color: #000;
+    color: #fff;
+  }
+  

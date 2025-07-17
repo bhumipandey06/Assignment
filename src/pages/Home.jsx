@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Header from "../components/Header";
 import "./../styles/home.css";
 import AddButtonForm from "../components/AddButtonForm";
+import EditableText from "../components/EditableText";
 
 const Home = () => {
   const [ctaButtons, setCtaButtons] = useState([]);
@@ -21,6 +22,13 @@ const Home = () => {
             <h1 className="hero-title">
               A Luxurious Way To <br /> Enjoy Your Life
             </h1>
+
+            <EditableText
+              component="HeroSection"
+              field="heading"
+              initialValue="A Luxurious Way To Enjoy Your Life"
+            />
+
             <button className="hero-button">Discover Rooms →</button>
           </div>
 
