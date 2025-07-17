@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "../styles/components.css";
 
 const AddButtonForm = ({ onAdd }) => {
+  const [showForm, setShowForm] = useState(false);
   const [text, setText] = useState("");
   const [url, setUrl] = useState("");
 
@@ -11,9 +12,16 @@ const AddButtonForm = ({ onAdd }) => {
     onAdd({ text, url });
     setText("");
     setUrl("");
+    setShowForm(false);
   };
 
   return (
+    <div className="add-cta-wrapper">
+      {!showForm ? (
+        <button className="open-form-btn" onClick={() => setShowForm(true)}>
+          + Book Now
+        </button>
+      ) : (
     <form className="add-btn-form" onSubmit={handleSubmit}>
       <input
         type="text"
@@ -29,6 +37,8 @@ const AddButtonForm = ({ onAdd }) => {
       />
       <button type="submit">Add CTA</button>
     </form>
+    )}
+    </div>
   );
 };
 

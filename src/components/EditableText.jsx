@@ -11,7 +11,7 @@ const EditableText = ({ component, field, initialValue }) => {
     setValue(newValue);
     setIsEditing(false);
 
-    // Simulate API log
+    // API log
     console.log("FRONTEND EDIT DETECTED");
     console.log(`Component: ${component}`);
     console.log(`Field: ${field}`);

@@ -1,0 +1,65 @@
+.room-hero {
+    height: 60vh;
+    background: url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .room-hero-overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .room-hero-title {
+    color: #fff;
+    font-size: 48px;
+    font-family: 'Georgia', serif;
+  }
+  
+
+  .room-listing {
+    padding: 60px 40px;
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+  
+  .room-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+  }
+  
+  .room-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 280px;
+  }
+  
+  .room-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 15px;
+  }
+
+  @media (max-width: 768px) {
+    .room-hero-title {
+      font-size: 32px;
+    }
+  
+    .room-card {
+      width: 100%;
+    }
+  }
+  

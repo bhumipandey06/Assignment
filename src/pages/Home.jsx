@@ -3,12 +3,18 @@ import Header from "../components/Header";
 import "./../styles/home.css";
 import AddButtonForm from "../components/AddButtonForm";
 import EditableText from "../components/EditableText";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
   const [ctaButtons, setCtaButtons] = useState([]);
 
   const handleAddButton = (newButton) => {
     setCtaButtons([...ctaButtons, newButton]);
+  };
+
+  const navigate = useNavigate();
+  const handleDiscoverClick = () => {
+    navigate("/room");
   };
 
   return (
@@ -29,10 +35,11 @@ const Home = () => {
               initialValue="A Luxurious Way To Enjoy Your Life"
             />
 
-            <button className="hero-button">Discover Rooms →</button>
+            <button className="hero-button" onClick={handleDiscoverClick}>
+              Discover Rooms →
+            </button>
           </div>
 
-          {/* Left and right arrows */}
           <div className="hero-arrow left">❮</div>
           <div className="hero-arrow right">❯</div>
         </div>
