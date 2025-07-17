@@ -1,173 +1,281 @@
 .header {
-    background-color: #000000;
-    padding: 20px 40px;
-    color: #fff;
-    font-family: 'Georgia', serif;
-  }
-  
+  background-color: #000000;
+  padding: 20px 40px;
+  color: #fff;
+  font-family: "Georgia", serif;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #d5a86e;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nav-links a,
+.nav-links span {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  position: relative;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #1a1a1a;
+  top: 100%;
+  left: 0;
+  z-index: 100;
+  padding: 10px;
+  min-width: 120px;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 5px 10px;
+  color: #fff;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+@media (max-width: 768px) {
   .header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-  
-  .logo {
-    font-size: 24px;
-    font-weight: bold;
-    letter-spacing: 1px;
-    color: #d5a86e;
-  }
-  
-  .nav-links {
-    display: flex;
-    gap: 25px;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-  
-  .nav-links a, .nav-links span {
-    text-decoration: none;
-    color: #fff;
-    font-size: 16px;
-    position: relative;
-    cursor: pointer;
-  }
-  
-  .dropdown {
-    position: relative;
-  }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #1a1a1a;
-    top: 100%;
-    left: 0;
-    z-index: 100;
-    padding: 10px;
-    min-width: 120px;
-  }
-  
-  .dropdown-content a {
-    display: block;
-    padding: 5px 10px;
-    color: #fff;
-  }
-  
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
-  
-  @media (max-width: 768px) {
-    .header-container {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  
-    .nav-links {
-      flex-direction: column;
-      width: 100%;
-    }
-  
-    .nav-links a, .nav-links span {
-      padding: 8px 0;
-    }
-  }
-  
-  .add-cta-wrapper {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .open-form-btn {
-    padding: 12px 24px;
-    background-color: #d5a86e;
-    border: none;
-    color: #000;
-    font-weight: bold;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: 0.3s ease;
-  }
-  
-  .open-form-btn:hover {
-    background-color: #000;
-    color: #fff;
-  }
-  
-  .add-btn-form {
-    display: flex;
     flex-direction: column;
-    gap: 12px;
-    align-items: center;
-    margin-top: 10px;
-  }
-  
-  .add-btn-form input {
-    width: 100%;
-    max-width: 300px;
-    padding: 10px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-  }
-  
-  .form-buttons {
-    display: flex;
-    gap: 10px;
-  }
-  
-  .form-buttons button {
-    padding: 10px 16px;
-    font-weight: bold;
-    cursor: pointer;
-    border: none;
-    border-radius: 4px;
-  }
-  
-  .form-buttons button[type="submit"] {
-    background-color: #d5a86e;
-    color: #000;
-  }
-  
-  .form-buttons button[type="button"] {
-    background-color: #ccc;
-    color: #000;
+    align-items: flex-start;
   }
 
-  
-  .editable-text-container {
-    margin: 20px auto;
-    text-align: center;
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
   }
-  
-  .editable-text {
-    font-size: 48px;
-    line-height: 1.2;
-    margin-bottom: 20px;
-    font-weight: bold;
-    outline: none;
+
+  .nav-links a,
+  .nav-links span {
+    padding: 8px 0;
   }
-  
-  .editable-text.editing {
-    background-color: #403c2e;
-    border: 1px dashed #d5a86e;
-    padding: 8px;
+}
+
+.add-cta-wrapper {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.open-form-btn {
+  padding: 12px 24px;
+  background-color: #d5a86e;
+  border: none;
+  color: #000;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.open-form-btn:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.add-btn-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.add-btn-form input {
+  width: 100%;
+  max-width: 300px;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.form-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.form-buttons button {
+  padding: 10px 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+}
+
+.form-buttons button[type="submit"] {
+  background-color: #d5a86e;
+  color: #000;
+}
+
+.form-buttons button[type="button"] {
+  background-color: #ccc;
+  color: #000;
+}
+
+.editable-text-container {
+  margin: 20px auto;
+  text-align: center;
+}
+
+.editable-text {
+  font-size: 48px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  font-weight: bold;
+  outline: none;
+}
+
+.editable-text.editing {
+  background-color: #403c2e;
+  border: 1px dashed #d5a86e;
+  padding: 8px;
+}
+
+.editable-text-container button {
+  padding: 10px 20px;
+  background-color: #d5a86e;
+  border: none;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+.editable-text-container button:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.footer {
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 60px 40px 30px;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.footer-col {
+  flex: 1;
+  min-width: 240px;
+}
+
+.logo-col h2 {
+  font-size: 24px;
+  color: #d5a86e;
+}
+
+.footer-col h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 8px;
+}
+
+.footer-col ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.subscribe-col form {
+  display: flex;
+  margin-top: 10px;
+}
+
+.subscribe-col input {
+  padding: 10px;
+  border: none;
+  flex: 1;
+  border-radius: 4px 0 0 4px;
+}
+
+.subscribe-col button {
+  background-color: #d5a86e;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 0 4px 4px 0;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.footer-bottom {
+  border-top: 1px solid #444;
+  margin-top: 40px;
+  padding-top: 20px;
+  text-align: center;
+}
+
+.footer-bottom .social-icons span {
+  font-size: 18px;
+  margin: 0 6px;
+}
+
+.footer-links {
+  margin-top: 10px;
+}
+
+.footer-links a {
+  margin: 0 10px;
+  font-size: 13px;
+  color: #aaa;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    gap: 30px;
   }
-  
-  .editable-text-container button {
-    padding: 10px 20px;
-    background-color: #d5a86e;
-    border: none;
-    color: #000;
-    font-weight: bold;
-    cursor: pointer;
+
+  .subscribe-col form {
+    flex-direction: column;
+  }
+
+  .subscribe-col input,
+  .subscribe-col button {
+    width: 100%;
     border-radius: 4px;
-    transition: 0.3s;
   }
-  
-  .editable-text-container button:hover {
-    background-color: #000;
-    color: #fff;
+
+  .subscribe-col button {
+    margin-top: 10px;
   }
-  
+}

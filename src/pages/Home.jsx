@@ -4,6 +4,7 @@ import "./../styles/home.css";
 import AddButtonForm from "../components/AddButtonForm";
 import EditableText from "../components/EditableText";
 import { useNavigate } from "react-router-dom";
+import Footer from "../components/Footer";
 
 const Home = () => {
   const [ctaButtons, setCtaButtons] = useState([]);
@@ -96,6 +97,90 @@ const Home = () => {
           ))}
         </div>
       </section>
+
+      <section className="amenities-section">
+        <p className="section-subtitle">INTRODUCING OUR SERVICES</p>
+        <h2 className="section-title">Amenities That You Can Enjoy</h2>
+
+        <div className="amenities-grid">
+          <div className="amenity-card light">
+            <h3>Workout & Yoga Rooms</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+              convallis egestas rhoncus.
+            </p>
+            <button>Discover More</button>
+          </div>
+
+          <div className="amenity-card dark">
+            <h3>Spa, Massage & Sauna</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+              convallis egestas rhoncus.
+            </p>
+            <button>Discover More</button>
+          </div>
+
+          <div className="amenity-card dark">
+            <h3>Multiple Cuisines & Beverages</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+              convallis egestas rhoncus.
+            </p>
+            <button>Discover More</button>
+          </div>
+        </div>
+      </section>
+
+      <section className="testimonial-section">
+        <div className="testimonial-overlay">
+          <p className="section-subtitle">OUR CUSTOMER REVIEW</p>
+          <h2 className="section-title light">What Our Client Says</h2>
+
+          <div className="testimonial-box">
+            <div className="stars">★★★★★</div>
+            <p className="testimonial-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis
+              fermentum, consectetur at, rhoncus sapien.
+            </p>
+            <p className="testimonial-author">
+              Jackson Dean
+              <br />
+              <span>Guest</span>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="team-section">
+        <p className="section-subtitle">MEET OUR TEAM</p>
+        <h2 className="section-title">Expert Team Persons</h2>
+
+        <div className="team-grid">
+          <div className="team-card">
+            <div className="team-photo"></div>
+            <h3>Laurent Wayne</h3>
+            <p>Hotel Manager</p>
+          </div>
+          <div className="team-card">
+            <div className="team-photo"></div>
+            <h3>Josh Mullins</h3>
+            <p>Kitchen Manager</p>
+          </div>
+          <div className="team-card">
+            <div className="team-photo"></div>
+            <h3>Andrea Hugh</h3>
+            <p>Receptionist</p>
+          </div>
+          <div className="team-card">
+            <div className="team-photo"></div>
+            <h3>James Norman</h3>
+            <p>Room Service</p>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
     </>
   );
 };

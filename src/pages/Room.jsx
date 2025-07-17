@@ -2,6 +2,7 @@ import React from "react";
 import Header from "../components/Header";
 import "./../styles/room.css";
 import EditableText from "../components/EditableText";
+import Footer from "../components/Footer";
 
 const Room = () => {
   return (
@@ -13,7 +14,7 @@ const Room = () => {
           <h1 className="room-hero-title">Rooms</h1>
         </div>
       </section>
-      
+
       <section className="room-listing">
         <EditableText
           component="RoomPage"
@@ -53,6 +54,53 @@ const Room = () => {
           </div>
         </div>
       </section>
+      <section className="extra-services">
+        <p className="section-subtitle">EXTRA SERVICES</p>
+        <h2 className="section-title">You Can Also Enjoy These</h2>
+
+        <div className="service-grid">
+          <div className="service-card">
+            <h3>Room Cleaning</h3>
+            <p>Daily housekeeping with fresh linens and towels.</p>
+          </div>
+          <div className="service-card">
+            <h3>Concierge</h3>
+            <p>Personal concierge for local experiences & reservations.</p>
+          </div>
+          <div className="service-card">
+            <h3>Room Service</h3>
+            <p>24/7 dining from the comfort of your room.</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="inroom-amenities">
+        <p className="section-subtitle">THE ESSENTIAL</p>
+        <h2 className="section-title">In-Room Amenities</h2>
+
+        <div className="amenities-icon-grid">
+          <div className="amenity-icon">
+            📶<p>Wi-Fi</p>
+          </div>
+          <div className="amenity-icon">
+            ❄️<p>Air Conditioning</p>
+          </div>
+          <div className="amenity-icon">
+            📺<p>Smart TV</p>
+          </div>
+          <div className="amenity-icon">
+            🛏️<p>Queen Bed</p>
+          </div>
+          <div className="amenity-icon">
+            🚿<p>Shower</p>
+          </div>
+          <div className="amenity-icon">
+            🍾<p>Mini Bar</p>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
     </>
   );
 };

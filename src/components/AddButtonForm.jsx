@@ -25,13 +25,13 @@ const AddButtonForm = ({ onAdd }) => {
     <form className="add-btn-form" onSubmit={handleSubmit}>
       <input
         type="text"
-        placeholder="Button Text (e.g., Book Now)"
+        placeholder="Book Now"
         value={text}
         onChange={(e) => setText(e.target.value)}
       />
       <input
         type="text"
-        placeholder="Button URL (e.g., tel:1234567890)"
+        placeholder="Call Now"
         value={url}
         onChange={(e) => setUrl(e.target.value)}
       />
