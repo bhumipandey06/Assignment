@@ -9,7 +9,7 @@ const AddButtonModal = () => {
     url: '',
     text: 'Button',
     style: 'Fill',
-    color: '#4338ca',
+    color: '#d5a86e',
     size: 'Medium',
   });
 
