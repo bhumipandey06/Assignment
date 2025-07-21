@@ -71,12 +71,13 @@
   
   .dynamic-btn {
     border-radius: 6px;
-    font-weight: bold;
-    padding: 10px 18px;
-    text-decoration: none;
-    display: inline-block;
-    transition: all 0.3s ease;
-    border: 2px solid;
+  font-weight: 600;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
   }
   
   .dynamic-btn.Fill {
@@ -89,17 +90,17 @@
   }
   
   .dynamic-btn.Small {
-    font-size: 14px;
-    padding: 6px 12px;
+    font-size: 12px;
+  padding: 6px 12px;
   }
   
   .dynamic-btn.Medium {
     font-size: 16px;
-    padding: 10px 18px;
+    padding: 10px 20px;
   }
   
   .dynamic-btn.Large {
-    font-size: 18px;
-    padding: 14px 24px;
+    font-size: 20px;
+    padding: 14px 28px;
   }
   

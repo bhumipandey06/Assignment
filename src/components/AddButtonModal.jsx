@@ -87,7 +87,7 @@ const AddButtonModal = () => {
             key={idx}
             href={btn.url}
             className={`dynamic-btn ${btn.style} ${btn.size}`}
-            style={{ backgroundColor: btn.style === 'Fill' ? btn.color : 'transparent', borderColor: btn.color, color: btn.style === 'Fill' ? '#fff' : btn.color }}
+            style={{ backgroundColor: btn.color }}
           >
             {btn.text}
           </a>
