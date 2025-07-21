@@ -1,17 +1,18 @@
-import React, { useState } from "react";
+import React from "react";
 import Header from "../components/Header";
 import "./../styles/home.css";
-import AddButtonForm from "../components/AddButtonForm";
+// import AddButtonForm from "../components/AddButtonForm";
 import EditableText from "../components/EditableText";
 import { useNavigate } from "react-router-dom";
 import Footer from "../components/Footer";
+import AddButtonModal from "../components/AddButtonModal";
 
 const Home = () => {
-  const [ctaButtons, setCtaButtons] = useState([]);
+  // const [ctaButtons, setCtaButtons] = useState([]);
 
-  const handleAddButton = (newButton) => {
-    setCtaButtons([...ctaButtons, newButton]);
-  };
+  // const handleAddButton = (newButton) => {
+  //   setCtaButtons([...ctaButtons, newButton]);
+  // };
 
   const navigate = useNavigate();
   const handleDiscoverClick = () => {
@@ -79,23 +80,9 @@ const Home = () => {
           <div className="room-card">Room 3</div>
         </div>
 
-        <div className="add-button-container">
-          <AddButtonForm onAdd={handleAddButton} />
-        </div>
+        <AddButtonModal />
 
-        <div className="cta-buttons-container">
-          {ctaButtons.map((btn, index) => (
-            <a
-              key={index}
-              href={btn.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="cta-btn"
-            >
-              {btn.text}
-            </a>
-          ))}
-        </div>
+
       </section>
 
       <section className="amenities-section">
