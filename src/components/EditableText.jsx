@@ -20,7 +20,7 @@ const EditableText = ({ component, field, initialValue }) => {
   console.log("-".repeat(50));
 
     try {
-      await axios.post("http://localhost:5000/api/update-section", {
+      await axios.post("https://assignment-x5r4.onrender.com/api/update-section", {
         component,
         field,
         value: newValue,
