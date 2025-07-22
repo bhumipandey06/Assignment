@@ -12,6 +12,13 @@ const EditableText = ({ component, field, initialValue }) => {
     setValue(newValue);
     setIsEditing(false);
 
+    console.log("FRONTEND EDIT DETECTED");
+  console.log(`Component: ${component}`);
+  console.log(`Field: ${field}`);
+  console.log("New Value:");
+  console.log(newValue);
+  console.log("-".repeat(50));
+
     try {
       await axios.post("http://localhost:5000/api/update-section", {
         component,
@@ -19,9 +26,9 @@ const EditableText = ({ component, field, initialValue }) => {
         value: newValue,
       });
 
-      console.log("Edit logged successfully.");
+      console.log("Edit logged to backend successfully.");
     } catch (err) {
-      console.error("Failed to log edit:", err.message);
+      console.error("Failed to log edit to backend:", err.message);
     }
   };
 
