@@ -1,4 +1,5 @@
 import React, { useState, useRef } from "react";
+import axios from "axios";
 import "../styles/components.css";
 
 const EditableText = ({ component, field, initialValue }) => {
@@ -6,18 +7,22 @@ const EditableText = ({ component, field, initialValue }) => {
   const [value, setValue] = useState(initialValue);
   const contentRef = useRef(null);
 
-  const handleSave = () => {
+  const handleSave = async () => {
     const newValue = contentRef.current.innerText;
     setValue(newValue);
     setIsEditing(false);
 
-    // API log
-    console.log("FRONTEND EDIT DETECTED");
-    console.log(`Component: ${component}`);
-    console.log(`Field: ${field}`);
-    console.log("New Value:");
-    console.log(newValue);
-    console.log("-".repeat(50));
+    try {
+      await axios.post("http://localhost:5000/api/update-section", {
+        component,
+        field,
+        value: newValue,
+      });
+
+      console.log("Edit logged successfully.");
+    } catch (err) {
+      console.error("Failed to log edit:", err.message);
+    }
   };
 
   return (
