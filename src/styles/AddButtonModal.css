@@ -104,3 +104,23 @@
     padding: 14px 28px;
   }
   
+  .btn-with-edit {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .edit-icon-btn {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    color: #666;
+    transition: color 0.2s;
+  }
+  
+  .edit-icon-btn:hover {
+    color: #000;
+  }
+  
